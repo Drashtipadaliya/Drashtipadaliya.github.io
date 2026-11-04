@@ -175,11 +175,12 @@ var P=[
 d:"A full web CRM for a trademark consultancy, covering the whole application journey from first enquiry to filing and follow-up.",
 be:["Python","Flask","SQLAlchemy","PostgreSQL","Pandas","ReportLab","python-docx"],fe:["HTML (Jinja)","CSS","JavaScript","jQuery","Select2"],
 l:["Pipeline: details, search, application under process, follow-up, with lost and restore","Admin and user panels, member management and an edit-permission approval flow","Auto-generated POA, LOA, affidavit and fee receipts, with checklists in English and Gujarati","Reports with Excel, Word and PDF export, plus filtered contact and task lists","Audit log, record history and notifications","Automatic daily, monthly and yearly PostgreSQL backups with integrity checks","About 13,600 lines of Flask code, 15 models, 95+ routes"]},
-{t:"H_SMachines Online Store",s:"Electronics e-commerce website",demo:"shop",
+{t:"H_SMachines Online Store (PHP)",s:"Electronics e-commerce website",demo:"shop",
 d:"An online shopping website for electronics such as laptops, phones, tablets and headphones. Customers register, shop and pay, and admins run the whole store from a panel.",be:["PHP","MySQL","FPDF"],fe:["HTML","CSS","Bootstrap 5","JavaScript","jQuery","Owl Carousel","Animate.css"],g:"https://github.com/Drashtipadaliya/hardware-softwaremachinesstore",
 l:["Customer registration, login, password reset and profile","Browse products by category, product details, add to cart with a live cart count","Checkout with PayPal, and only logged-in users can buy","Bill generated as a PDF","Admin panel to add and view products, categories and services, manage the team, and view customers, feedback and bills","Contact and feedback forms","Built solo as a BCA semester 5 project, with about 59 PHP files"]},
-{t:"H S Machines Store",s:"Machines store web application",
-d:"A second version of the machines store project.",be:null,fe:null,g:"https://github.com/Drashtipadaliya/h_smachinesstore"},
+{t:"H_S Machines Online Store (ASP.NET)",s:"Electronics e-commerce website",demo:"shop",
+d:"The same online store rebuilt in ASP.NET with SQL Server. Customers browse, order and get a PDF bill, and admins manage the store from one panel.",be:["ASP.NET Web Forms","C#","SQL Server","ADO.NET","iTextSharp"],fe:["ASPX pages","Master pages","CSS","Bootstrap 5","JavaScript","jQuery","Owl Carousel","Animate.css"],g:"https://github.com/Drashtipadaliya/h_smachinesstore",
+l:["Customer registration, login, password reset and profile","Catalog and shop with product details, plus a cart and checkout","Cash on delivery orders with a PDF bill made using iTextSharp","Admin panel to manage products (with image upload), categories, services and team, and to view customers, bills and feedback","Contact and feedback forms","Built solo for BCA semester 6 (Nov 2024 to Feb 2025): 30 pages and about 2,500 lines of C# code-behind"]},
 {t:"Advisure CRM",s:"Multi-role task and client CRM",demo:"adv",
 d:"A web CRM where admins, managers and employees each get their own dashboard to manage companies, contacts and tasks from start to finish.",
 be:["Python","Flask","SQLAlchemy","PostgreSQL","Pandas","ReportLab","python-docx"],fe:["HTML (Jinja)","CSS","JavaScript","jQuery","Select2","Font Awesome"],
@@ -266,7 +267,7 @@ var ks=Object.keys(cart);
 h+='<h3 style="margin:28px 0 10px">'+(done?'Your bill':'Cart')+'</h3>';
 if(done)h+='<div class="box"><b>Bill #HS-1001 (demo)</b>'+ks.map(function(k){return '<p style="margin:6px 0">'+k+' × '+cart[k].q+' = ₹'+cart[k].p*cart[k].q+'</p>'}).join('')+'<p><b>Total: ₹'+tot()+'</b></p><button class="sm on" data-a="d">Download PDF (demo)</button><button class="sm" data-a="r">Shop again</button></div>';
 else if(!ks.length)h+='<p class="lead">Your cart is empty. Add a product above.</p>';
-else h+='<div class="box">'+ks.map(function(k){var c=cart[k];return '<p style="margin:6px 0">'+k+' <button class="sm" data-a="m" data-n="'+k+'">−</button> '+c.q+' <button class="sm" data-a="p" data-n="'+k+'">+</button> ₹'+c.p*c.q+'</p>'}).join('')+'<p><b>Total: ₹'+tot()+'</b></p><button class="sm on" data-a="o">Checkout with PayPal (demo)</button></div>';
+else h+='<div class="box">'+ks.map(function(k){var c=cart[k];return '<p style="margin:6px 0">'+k+' <button class="sm" data-a="m" data-n="'+k+'">−</button> '+c.q+' <button class="sm" data-a="p" data-n="'+k+'">+</button> ₹'+c.p*c.q+'</p>'}).join('')+'<p><b>Total: ₹'+tot()+'</b></p><button class="sm on" data-a="o">Checkout (demo)</button></div>';
 b.innerHTML=h}
 b.onclick=function(e){var x=e.target.closest('[data-a]');if(!x)return;var a=x.dataset.a,n=x.dataset.n;
 if(a==='c')cat=x.dataset.k;
