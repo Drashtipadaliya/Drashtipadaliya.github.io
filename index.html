@@ -73,7 +73,7 @@ h2{font-size:clamp(34px,6vw,64px);font-weight:800;margin-bottom:10px}
 .fe .pill{background:color-mix(in srgb,var(--a3) 12%,transparent);color:var(--a3)}
 .tag{font:800 13px Manrope,sans-serif;color:var(--mut)}
 .stack{display:grid;gap:18px}
-.pj{position:sticky;padding:clamp(22px,3.5vw,38px);border-radius:32px;background:var(--tile);border:1px solid var(--bd);cursor:pointer;box-shadow:0 -18px 40px -24px rgba(0,0,0,.35);transition:border-color .25s}
+.pj{position:relative;padding:clamp(22px,3.5vw,38px);border-radius:32px;background:var(--tile);border:1px solid var(--bd);cursor:pointer;box-shadow:0 -18px 40px -24px rgba(0,0,0,.35);transition:border-color .25s}
 .pj:hover{border-color:var(--a1)}
 .pj.f{background:linear-gradient(135deg,color-mix(in srgb,var(--a1) 16%,var(--tile)),color-mix(in srgb,var(--a2) 12%,var(--tile)))}
 .pj h3{font-size:clamp(26px,4vw,40px);margin:4px 0 8px}
@@ -172,7 +172,7 @@ var roles=["Python Developer","ASP.NET Developer","Web Developer","Aspiring Soft
 if(!dl&&ci<w.length){ci++;setTimeout(k,70)}else if(!dl){dl=true;setTimeout(k,1300)}else if(ci>0){ci--;setTimeout(k,35)}else{dl=false;ri=(ri+1)%roles.length;setTimeout(k,250)}})();
 
 var st=$("#stack");
-P.forEach(function(p,i){var c=document.createElement("div");c.className="pj rv"+(p.f?" f":"")+(p.soon?" soon":"");c.style.top="calc(env(safe-area-inset-top,0px) + "+(78+i*14)+"px)";
+P.forEach(function(p,i){var c=document.createElement("div");c.className="pj rv"+(p.f?" f":"")+(p.soon?" soon":"");
 var h="<span class=\"tag\">"+p.s+"</span><h3>"+p.t+"</h3>";
 if(p.soon){h+="<p style=\"margin:0\">Another CRM project will appear here.</p>";c.innerHTML=h;st.appendChild(c);return}
 h+="<p>"+p.d+"</p><div class=\"two\">";
