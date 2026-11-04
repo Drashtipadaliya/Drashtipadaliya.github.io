@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Drashti Padaliya · Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5fb;--fg:#15121f;--mut:#5e5a73;--tile:#fff;--bd:rgba(21,18,31,.1);--a1:#6d28d9;--a2:#db2777;--a3:#0891b2;--hot:#ea580c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08070f;--fg:#f4f2fb;--mut:#a29fbd;--tile:#13111f;--bd:rgba(255,255,255,.1);--a1:#a78bfa;--a2:#f472b6;--a3:#22d3ee;--hot:#fb923c}}
+:root[data-theme="dark"]{--bg:#08070f;--fg:#f4f2fb;--mut:#a29fbd;--tile:#13111f;--bd:rgba(255,255,255,.1);--a1:#a78bfa;--a2:#f472b6;--a3:#22d3ee;--hot:#fb923c}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:500 16px/1.6 Manrope,system-ui,sans-serif;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;margin:0;line-height:1.02;letter-spacing:-.03em}
+a{color:inherit;text-decoration:none}
+.aur{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(600px 400px at 12% 8%,color-mix(in srgb,var(--a1) 28%,transparent),transparent 70%),radial-gradient(520px 380px at 90% 22%,color-mix(in srgb,var(--a2) 22%,transparent),transparent 70%),radial-gradient(500px 360px at 50% 100%,color-mix(in srgb,var(--a3) 18%,transparent),transparent 70%)}
+.glow{position:fixed;left:0;top:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,color-mix(in srgb,var(--a2) 30%,transparent),transparent 65%);will-change:transform}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;display:flex;justify-content:space-between;align-items:center;padding:12px clamp(16px,5vw,48px);background:color-mix(in srgb,var(--bg) 88%,transparent);border-bottom:1px solid var(--bd)}
+.logo{font:800 22px "Bricolage Grotesque",sans-serif}
+.logo i{font-style:normal;background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;gap:4px;align-items:center}
+.links a,.links button{padding:8px 13px;border-radius:99px;font:700 14px Manrope,sans-serif;color:var(--mut);background:none;border:0;cursor:pointer;transition:color .2s,background .2s}
+.links a:hover,.links button:hover{color:var(--fg);background:var(--tile)}
+@media(max-width:720px){.links a{display:none}}
+main{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+section{padding:clamp(48px,8vw,90px) 0}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;padding-top:clamp(24px,5vw,56px)}
+.t{background:var(--tile);border:1px solid var(--bd);border-radius:28px;padding:clamp(20px,3vw,32px);position:relative;overflow:hidden}
+.name{grid-column:span 4;grid-row:span 2;display:flex;flex-direction:column;justify-content:center;gap:16px;min-height:360px}
+.pic{grid-column:span 2;display:grid;place-items:center;min-height:200px}
+.sts{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:center}
+.live{grid-column:span 2}.edu{grid-column:span 2}.mail{grid-column:span 2;background:linear-gradient(135deg,var(--a1),var(--a2));color:#fff;border:0;display:flex;flex-direction:column;justify-content:space-between;gap:10px;transition:transform .25s}
+.mail:hover{transform:scale(1.02)}
+@media(max-width:860px){.name,.pic,.sts,.live,.edu,.mail{grid-column:span 6}.name{min-height:0}}
+@media(min-width:861px) and (max-width:1000px){.live,.edu,.mail{grid-column:span 3}.mail{grid-column:span 6}}
+h1{font-size:clamp(44px,8vw,96px);font-weight:800}
+.grad{background:linear-gradient(100deg,var(--a1),var(--a2),var(--hot),var(--a1));background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:260% 0}}
+.role{font:800 clamp(20px,3vw,30px) "Bricolage Grotesque",sans-serif;min-height:1.3em}
+.caret{display:inline-block;width:3px;height:.95em;background:var(--a2);margin-left:3px;vertical-align:-2px;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+.sub{color:var(--mut);max-width:520px;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:99px;font:800 15px Manrope,sans-serif;border:1px solid var(--bd);background:var(--tile);color:var(--fg);cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.p{border:0;color:#fff;background:linear-gradient(100deg,var(--a1),var(--a2))}
+.ring{width:min(180px,60%);aspect-ratio:1;border-radius:50%;padding:5px;background:conic-gradient(var(--a1),var(--a2),var(--hot),var(--a3),var(--a1));animation:sp 9s linear infinite;display:grid;place-items:center}
+@keyframes sp{to{transform:rotate(360deg)}}
+.ring b{width:100%;height:100%;border-radius:50%;background:var(--tile);display:grid;place-items:center;font:800 56px "Bricolage Grotesque",sans-serif;animation:sp 9s linear infinite reverse}
+.n{font:800 clamp(34px,5vw,46px) "Bricolage Grotesque",sans-serif;background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.sts small{color:var(--mut);font-weight:600;font-size:13px;display:block}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#22c55e;margin-right:8px;animation:pl 2s infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 rgba(34,197,94,.6)}70%,100%{box-shadow:0 0 0 10px transparent}}
+.t h3{font-size:22px;margin-bottom:6px}.t p{margin:0;color:var(--mut)}
+.mail p{color:#ffffffcc}
+h2{font-size:clamp(34px,6vw,64px);font-weight:800;margin-bottom:10px}
+.lead{color:var(--mut);margin:0 0 30px;max-width:560px}
+.mq{overflow:hidden;border-block:1px solid var(--bd);padding:16px 0;mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq div{display:flex;gap:40px;width:max-content;animation:mq 28s linear infinite;font:800 clamp(22px,4vw,34px) "Bricolage Grotesque",sans-serif;color:var(--mut)}
+.mq span:nth-child(3n+1){color:var(--fg)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pill{padding:8px 16px;border-radius:99px;border:1px solid var(--bd);font-weight:800;font-size:14.5px;transition:transform .2s,border-color .2s,color .2s}
+.pill:hover{transform:translateY(-3px) rotate(-2deg);border-color:var(--a2)}
+.be .pill{background:color-mix(in srgb,var(--a1) 12%,transparent);color:var(--a1)}
+.fe .pill{background:color-mix(in srgb,var(--a3) 12%,transparent);color:var(--a3)}
+.tag{font:800 13px Manrope,sans-serif;color:var(--mut)}
+.stack{display:grid;gap:18px}
+.pj{position:sticky;padding:clamp(22px,3.5vw,38px);border-radius:32px;background:var(--tile);border:1px solid var(--bd);cursor:pointer;box-shadow:0 -18px 40px -24px rgba(0,0,0,.35);transition:border-color .25s}
+.pj:hover{border-color:var(--a1)}
+.pj.f{background:linear-gradient(135deg,color-mix(in srgb,var(--a1) 16%,var(--tile)),color-mix(in srgb,var(--a2) 12%,var(--tile)))}
+.pj h3{font-size:clamp(26px,4vw,40px);margin:4px 0 8px}
+.pj>p{color:var(--mut);margin:0 0 18px;max-width:680px}
+.pj .two{gap:12px}
+.box{border:1px solid var(--bd);border-radius:20px;padding:16px 18px;background:color-mix(in srgb,var(--bg) 60%,transparent)}
+.box .pills{margin-top:10px}
+.exp{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
+.exp>div{overflow:hidden}
+.pj.open .exp{grid-template-rows:1fr}
+.exp ul{margin:16px 0 4px;padding-left:20px;color:var(--mut)}
+.exp li{margin:6px 0}
+.row{display:flex;gap:10px;align-items:center;margin-top:18px;flex-wrap:wrap}
+.hint{color:var(--a2);font-weight:800;font-size:14px}
+.soon{border-style:dashed;cursor:default;position:relative;text-align:center;color:var(--mut)}
+.tl{display:grid;gap:14px}
+.tl .t{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.cta{text-align:center;padding:clamp(40px,8vw,80px) 20px;border-radius:36px;background:linear-gradient(135deg,var(--a1),var(--a2) 60%,var(--hot));color:#fff}
+.cta h2{margin-bottom:12px}.cta p{color:#ffffffd9;max-width:520px;margin:0 auto 26px}
+.cta .btns{justify-content:center}
+.cta .btn{background:#fff;color:#15121f;border:0}
+footer{position:relative;z-index:1;text-align:center;padding:30px 16px;color:var(--mut);font-size:14px}
+.toast{position:fixed;left:50%;bottom:calc(26px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140px);padding:12px 22px;border-radius:99px;background:var(--fg);color:var(--bg);font-weight:800;z-index:90;transition:transform .35s cubic-bezier(.2,1.3,.4,1)}
+.toast.on{transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+section,.mq{content-visibility:auto;contain-intrinsic-size:auto 600px}
+:focus-visible{outline:2px solid var(--a2);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="aur"></div><div class="glow" id="glow"></div>
+<nav><a class="logo" href="#home">Drashti<i>.dev</i></a>
+<div class="links"><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a><button id="theme" aria-label="Switch light or dark theme">🌗</button></div></nav>
+<main>
+<div class="bento" id="home">
+<div class="t name"><span class="tag"><i class="dot"></i>Open to fresher roles and internships</span>
+<h1>Hi, I’m <span class="grad">Drashti Padaliya</span></h1>
+<div class="role"><span id="type"></span><i class="caret"></i></div>
+<p class="sub">I build web apps with Python and ASP.NET, from the interface to the database behind it. Finishing my MCA.</p>
+<div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="#contact">Contact me</a></div></div>
+<div class="t pic"><div class="ring"><b>DP</b></div></div>
+<div class="t sts"><div><div class="n" data-n="4">0</div><small>Projects</small></div><div><div class="n" data-n="11">0</div><small>Technologies</small></div></div>
+<div class="t live"><h3>About me</h3><p>An aspiring developer who likes turning real problems into working apps, writing clean code and learning fast.</p></div>
+<div class="t edu"><h3>Studying</h3><p>MCA at Mangalayatan University, after BCA at Shree V.N. Borad Mahila BCA College.</p></div>
+<a class="t mail" href="mailto:drashtipadaliya2204@gmail.com"><div><h3>Say hello</h3><p>drashtipadaliya2204@gmail.com</p></div><b>Email me ↗</b></a>
+</div>
+
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="skills"><h2 class="rv">Skills</h2><p class="lead rv">Split by where they run.</p>
+<div class="two rv">
+<div class="t be"><h3>Backend</h3><p>Logic, servers and data</p><div class="pills" id="be"></div></div>
+<div class="t fe"><h3>Frontend</h3><p>What people see and tap</p><div class="pills" id="fe"></div></div>
+</div></section>
+
+<section id="projects"><h2 class="rv">Projects</h2><p class="lead rv">Tap a card to open the details.</p>
+<div class="stack" id="stack"></div></section>
+
+<section id="education"><h2 class="rv">Education</h2>
+<div class="tl rv"><div class="t"><div><h3>MCA (running)</h3><p>Mangalayatan University</p></div></div><div class="t"><div><h3>BCA</h3><p>Shree V.N. Borad Mahila BCA College</p></div></div></div></section>
+
+<section id="contact"><div class="cta rv"><h2>Let’s build something together</h2><p>I’m looking for my first role as a software developer. Send me a message and I’ll reply soon.</p>
+<div class="btns"><a class="btn" href="mailto:drashtipadaliya2204@gmail.com">✉️ Email me</a><button class="btn" id="copy">Copy email</button><a class="btn" href="https://github.com/Drashtipadaliya" target="_blank" rel="noopener">GitHub</a></div></div></section>
+</main>
+<footer>© <span id="yr"></span> Drashti Padaliya</footer>
+<div class="toast" id="toast">Email copied ✓</div>
+
+<script>
+var BE=["Python","Flask","ASP.NET","PHP","Java","Node.js"],FE=["HTML5","CSS3","Bootstrap","JavaScript","AngularJS"];
+var P=[
+{t:"TM CRM",s:"Trademark management CRM",f:1,
+d:"A full web CRM for a trademark consultancy, covering the whole application journey from first enquiry to filing and follow-up.",
+be:["Python","Flask","SQLAlchemy","PostgreSQL","Pandas","ReportLab","python-docx"],fe:["HTML (Jinja)","CSS","JavaScript","jQuery","Select2"],
+l:["Pipeline: details, search, application under process, follow-up, with lost and restore","Admin and user panels, member management and an edit-permission approval flow","Auto-generated POA, LOA, affidavit and fee receipts, with checklists in English and Gujarati","Reports with Excel, Word and PDF export, plus filtered contact and task lists","Audit log, record history and notifications","Automatic daily, monthly and yearly PostgreSQL backups with integrity checks","About 13,600 lines of Flask code, 15 models, 95+ routes"]},
+{t:"Hardware Software Machines Store",s:"Machines store web application",
+d:"A web application for a hardware and software machines store.",be:null,fe:null,g:"https://github.com/Drashtipadaliya/hardware-softwaremachinesstore"},
+{t:"H S Machines Store",s:"Machines store web application",
+d:"A second version of the machines store project.",be:null,fe:null,g:"https://github.com/Drashtipadaliya/h_smachinesstore"},
+{t:"CRM project 2",s:"Adding soon",soon:1}
+];
+var $=function(q){return document.querySelector(q)},R=document.documentElement;
+R.setAttribute("data-theme","dark");
+$("#theme").onclick=function(){R.setAttribute("data-theme",R.getAttribute("data-theme")==="dark"?"light":"dark")};
+$("#yr").textContent=new Date().getFullYear();
+function pills(a){return a.map(function(x){return "<span class=\"pill\">"+x+"</span>"}).join("")}
+$("#be").innerHTML=pills(BE);$("#fe").innerHTML=pills(FE);
+var all=BE.concat(FE).map(function(x){return "<span>"+x+"</span>"}).join("");$("#mq").innerHTML=all+all;
+
+var roles=["Python Developer","ASP.NET Developer","Web Developer","Aspiring Software Engineer"],ri=0,ci=0,dl=false,ty=$("#type");
+(function k(){var w=roles[ri];ty.textContent=w.slice(0,ci);
+if(!dl&&ci<w.length){ci++;setTimeout(k,70)}else if(!dl){dl=true;setTimeout(k,1300)}else if(ci>0){ci--;setTimeout(k,35)}else{dl=false;ri=(ri+1)%roles.length;setTimeout(k,250)}})();
+
+var st=$("#stack");
+P.forEach(function(p,i){var c=document.createElement("div");c.className="pj rv"+(p.f?" f":"")+(p.soon?" soon":"");c.style.top="calc(env(safe-area-inset-top,0px) + "+(78+i*14)+"px)";
+var h="<span class=\"tag\">"+p.s+"</span><h3>"+p.t+"</h3>";
+if(p.soon){h+="<p style=\"margin:0\">Another CRM project will appear here.</p>";c.innerHTML=h;st.appendChild(c);return}
+h+="<p>"+p.d+"</p><div class=\"two\">";
+h+="<div class=\"box be\"><b>Backend</b><div class=\"pills\">"+(p.be?pills(p.be):"<span class=\"tag\">Details coming soon</span>")+"</div></div>";
+h+="<div class=\"box fe\"><b>Frontend</b><div class=\"pills\">"+(p.fe?pills(p.fe):"<span class=\"tag\">Details coming soon</span>")+"</div></div></div>";
+if(p.l)h+="<div class=\"exp\"><div><ul>"+p.l.map(function(x){return "<li>"+x+"</li>"}).join("")+"</ul></div></div>";
+h+="<div class=\"row\">"+(p.g?"<a class=\"btn p\" target=\"_blank\" rel=\"noopener\" href=\""+p.g+"\">View on GitHub</a>":"")+(p.l?"<span class=\"hint\">Tap to see features</span>":"")+"</div>";
+c.innerHTML=h;
+if(p.l){c.tabIndex=0;var tg=function(){c.classList.toggle("open");c.querySelector(".hint").textContent=c.classList.contains("open")?"Tap to hide features":"Tap to see features"};c.onclick=tg;c.onkeydown=function(e){if(e.key==="Enter")tg()}}
+st.appendChild(c)});
+
+$("#copy").onclick=function(){try{navigator.clipboard.writeText("drashtipadaliya2204@gmail.com")}catch(e){}var t=$("#toast");t.classList.add("on");setTimeout(function(){t.classList.remove("on")},1800)};
+
+var g=$("#glow");
+if(matchMedia("(hover:hover)").matches){var gx=0,gy=0,raf=0;addEventListener("pointermove",function(e){gx=e.clientX;gy=e.clientY;if(!raf)raf=requestAnimationFrame(function(){g.style.transform="translate("+gx+"px,"+gy+"px)";raf=0})},{passive:true})}else g.remove();
+
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
+function cnt(el){var n=+el.dataset.n,s=null;(function f(t){if(!s)s=t;var p=Math.min((t-s)/1100,1);el.textContent=Math.round(n*p);if(p<1)requestAnimationFrame(f)})(performance.now())}
+document.querySelectorAll("[data-n]").forEach(cnt);
+</script>
+</body>
+</html>
