@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Drashti Padaliya — aspiring software developer portfolio featuring Python, Flask, ASP.NET and web development projects.">
+<meta name="theme-color" content="#08070f">
 <title>Drashti Padaliya · Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -127,6 +129,47 @@ section,.mq{content-visibility:auto;contain-intrinsic-size:auto 600px}
 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin-top:14px}
 .pc{border:1px solid var(--bd);background:var(--tile);border-radius:20px;padding:16px;text-align:center}
 .pc i{font-style:normal;font-size:44px;display:block}
+
+/* Portfolio refinements */
+nav{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.links{min-width:0;max-width:78%;overflow-x:auto;scrollbar-width:none}
+.links::-webkit-scrollbar{display:none}
+.links a{white-space:nowrap}
+.pj{cursor:default}
+.pj .row{position:relative;z-index:2}
+.pj .hint{margin-left:auto}
+.pj:focus-visible{outline-offset:5px}
+.btn:focus-visible,.sm:focus-visible,.inp:focus-visible{outline:2px solid var(--a2);outline-offset:3px}
+.demo .dh{position:sticky;top:0;background:var(--bg);z-index:2}
+.demo .db{overscroll-behavior:contain}
+.demo .inp{max-width:100%}
+.kpi div{min-width:130px}
+@media(max-width:720px){
+  nav{gap:12px;align-items:center;padding:10px 14px}
+  .logo{font-size:19px;flex:0 0 auto}
+  .links{max-width:calc(100% - 105px);gap:2px}
+  .links a,.links button{display:inline-flex;padding:8px 10px;font-size:12px;white-space:nowrap}
+  .links button{flex:0 0 auto}
+  .bento{gap:10px}
+  .t{border-radius:22px}
+  .name{gap:13px}
+  .name h1{font-size:clamp(42px,12vw,68px);overflow-wrap:anywhere}
+  .pic{min-height:155px}
+  .ring{width:128px}
+  .ring b{font-size:44px}
+  .pj{border-radius:24px}
+  .pj .two{grid-template-columns:1fr}
+  .pj .hint{margin-left:0;width:100%}
+  .cta{border-radius:26px}
+  .dh{align-items:flex-start}
+  .dh b{width:100%}
+  .bdg{margin-right:auto}
+  .kan{grid-template-columns:repeat(4,minmax(215px,1fr))}
+  .dt{min-width:590px}
+  .inp{width:min(100%,260px)}
+}
+@media(hover:none){.glow{display:none}}
+@media(prefers-reduced-motion:reduce){.mq div{animation:none}}
 </style>
 </head>
 <body>
@@ -175,10 +218,10 @@ var P=[
 d:"A full web CRM for a trademark consultancy, covering the whole application journey from first enquiry to filing and follow-up.",
 be:["Python","Flask","SQLAlchemy","PostgreSQL","Pandas","ReportLab","python-docx"],fe:["HTML (Jinja)","CSS","JavaScript","jQuery","Select2"],
 l:["Pipeline: details, search, application under process, follow-up, with lost and restore","Admin and user panels, member management and an edit-permission approval flow","Auto-generated POA, LOA, affidavit and fee receipts, with checklists in English and Gujarati","Reports with Excel, Word and PDF export, plus filtered contact and task lists","Audit log, record history and notifications","Automatic daily, monthly and yearly PostgreSQL backups with integrity checks","About 13,600 lines of Flask code, 15 models, 95+ routes"]},
-{t:"H_SMachines Online Store (PHP)",s:"Electronics e-commerce website",demo:"shop",
+{t:"H_SMachines Online Store (PHP)",s:"Electronics e-commerce website",demo:"php-shop",
 d:"An online shopping website for electronics such as laptops, phones, tablets and headphones. Customers register, shop and pay, and admins run the whole store from a panel.",be:["PHP","MySQL","FPDF"],fe:["HTML","CSS","Bootstrap 5","JavaScript","jQuery","Owl Carousel","Animate.css"],g:"https://github.com/Drashtipadaliya/hardware-softwaremachinesstore",
 l:["Customer registration, login, password reset and profile","Browse products by category, product details, add to cart with a live cart count","Checkout with PayPal, and only logged-in users can buy","Bill generated as a PDF","Admin panel to add and view products, categories and services, manage the team, and view customers, feedback and bills","Contact and feedback forms","Built solo as a BCA semester 5 project, with about 59 PHP files"]},
-{t:"H_S Machines Online Store (ASP.NET)",s:"Electronics e-commerce website",demo:"shop",
+{t:"H_S Machines Online Store (ASP.NET)",s:"Electronics e-commerce website",demo:"asp-shop",
 d:"The same online store rebuilt in ASP.NET with SQL Server. Customers browse, order and get a PDF bill, and admins manage the store from one panel.",be:["ASP.NET Web Forms","C#","SQL Server","ADO.NET","iTextSharp"],fe:["ASPX pages","Master pages","CSS","Bootstrap 5","JavaScript","jQuery","Owl Carousel","Animate.css"],g:"https://github.com/Drashtipadaliya/h_smachinesstore",
 l:["Customer registration, login, password reset and profile","Catalog and shop with product details, plus a cart and checkout","Cash on delivery orders with a PDF bill made using iTextSharp","Admin panel to manage products (with image upload), categories, services and team, and to view customers, bills and feedback","Contact and feedback forms","Built solo for BCA semester 6 (Nov 2024 to Feb 2025): 30 pages and about 2,500 lines of C# code-behind"]},
 {t:"Advisure CRM",s:"Multi-role task and client CRM",demo:"adv",
@@ -187,8 +230,12 @@ be:["Python","Flask","SQLAlchemy","PostgreSQL","Pandas","ReportLab","python-docx
 l:["Three roles (Admin, Manager, Employee) with separate dashboards, task lists and edit screens","Tasks with workflows, sub-statuses, tags, a built-in timer, hide and restore, and bulk actions","Companies and contacts with an approve or reject flow and duplicate-name checks","Excel import and export, PDF downloads, and fiscal-year management","Notifications for due and overdue tasks, plus internal messaging","Audit log with purge preview, and a backup status page for admins","About 5,700 lines of Flask code, 12 models, 88 routes"]}
 ];
 var $=function(q){return document.querySelector(q)},R=document.documentElement;
-R.setAttribute("data-theme","dark");
-$("#theme").onclick=function(){R.setAttribute("data-theme",R.getAttribute("data-theme")==="dark"?"light":"dark")};
+var savedTheme="dark";
+try{savedTheme=localStorage.getItem("drashti-portfolio-theme")||"dark"}catch(e){}
+R.setAttribute("data-theme",savedTheme);
+function syncThemeButton(){var dark=R.getAttribute("data-theme")==="dark";$("#theme").textContent=dark?"☀️":"🌙";$("#theme").setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme")}
+syncThemeButton();
+$("#theme").onclick=function(){var next=R.getAttribute("data-theme")==="dark"?"light":"dark";R.setAttribute("data-theme",next);try{localStorage.setItem("drashti-portfolio-theme",next)}catch(e){}syncThemeButton()};
 $("#yr").textContent=new Date().getFullYear();
 function pills(a){return a.map(function(x){return "<span class=\"pill\">"+x+"</span>"}).join("")}
 $("#be").innerHTML=pills(BE);$("#fe").innerHTML=pills(FE);
@@ -208,10 +255,11 @@ h+="<div class=\"box fe\"><b>Frontend</b><div class=\"pills\">"+(p.fe?pills(p.fe
 if(p.l)h+="<div class=\"exp\"><div><ul>"+p.l.map(function(x){return "<li>"+x+"</li>"}).join("")+"</ul></div></div>";
 h+="<div class=\"row\">"+(p.demo?"<button class=\"btn p\" data-demo=\""+p.demo+"\">▶ Try demo</button>":"")+(p.g?"<a class=\"btn\" target=\"_blank\" rel=\"noopener\" href=\""+p.g+"\">View on GitHub</a>":"")+(p.l?"<span class=\"hint\">Tap to see features</span>":"")+"</div>";
 c.innerHTML=h;
-if(p.l){c.tabIndex=0;var tg=function(){c.classList.toggle("open");c.querySelector(".hint").textContent=c.classList.contains("open")?"Tap to hide features":"Tap to see features"};c.onclick=tg;c.onkeydown=function(e){if(e.key==="Enter")tg()}}
+if(p.l){c.tabIndex=0;var tg=function(){c.classList.toggle("open");var hint=c.querySelector(".hint");if(hint)hint.textContent=c.classList.contains("open")?"Tap to hide features":"Tap to see features"};c.onclick=function(e){if(e.target.closest("button,a"))return;tg()};c.onkeydown=function(e){if((e.key==="Enter"||e.key===" ")&&e.target===c){e.preventDefault();tg()}}}
 st.appendChild(c)});
 
-$("#copy").onclick=function(){try{navigator.clipboard.writeText("drashtipadaliya2204@gmail.com")}catch(e){}var t=$("#toast");t.classList.add("on");setTimeout(function(){t.classList.remove("on")},1800)};
+$("#copy").onclick=function(){var email="drashtipadaliya2204@gmail.com";if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(email).then(function(){tt("Email copied ✓")}).catch(function(){fallbackCopy(email)})}else fallbackCopy(email)};
+function fallbackCopy(value){var el=document.createElement("textarea");el.value=value;el.style.position="fixed";el.style.opacity="0";document.body.appendChild(el);el.select();try{document.execCommand("copy");tt("Email copied ✓")}catch(e){tt("Please copy: "+value)}el.remove()}
 
 var g=$("#glow");
 if(matchMedia("(hover:hover)").matches){var gx=0,gy=0,raf=0;addEventListener("pointermove",function(e){gx=e.clientX;gy=e.clientY;if(!raf)raf=requestAnimationFrame(function(){g.style.transform="translate("+gx+"px,"+gy+"px)";raf=0})},{passive:true})}else g.remove();
@@ -222,7 +270,7 @@ function cnt(el){var n=+el.dataset.n,s=null;(function f(t){if(!s)s=t;var p=Math.
 document.querySelectorAll("[data-n]").forEach(cnt);
 var D=$("#demo"),DI=0,DM={};
 function tt(m){var t=$("#toast");t.textContent=m;t.classList.add("on");setTimeout(function(){t.classList.remove("on");setTimeout(function(){t.textContent="Email copied ✓"},400)},1800)}
-function openDemo(k){var n={tm:"TM CRM",adv:"Advisure CRM",shop:"H_SMachines Online Store"}[k];
+function openDemo(k){clearInterval(DI);var n={tm:"TM CRM",adv:"Advisure CRM","php-shop":"H_SMachines Online Store · PHP","asp-shop":"H_S Machines Online Store · ASP.NET"}[k];
 D.innerHTML='<div class="dh"><b>'+n+'</b><span class="bdg">Demo with dummy data</span><button class="btn" id="dx">Close</button></div><div class="db" id="dbd"></div>';
 D.hidden=false;document.body.style.overflow="hidden";$("#dx").onclick=closeDemo;DM[k]($("#dbd"))}
 function closeDemo(){D.hidden=true;document.body.style.overflow="";clearInterval(DI)}
@@ -230,13 +278,21 @@ addEventListener("keydown",function(e){if(e.key==="Escape"&&!D.hidden)closeDemo(
 $("#stack").addEventListener("click",function(e){var x=e.target.closest("[data-demo]");if(x){e.stopPropagation();openDemo(x.dataset.demo)}},true);
 
 DM.tm=function(b){
-var S=['Details','Search','Application under process','Follow-up'],lost=0;
-var O=[{n:'Sunrise Spices',c:'A. Mehta',s:0,f:5000},{n:'Blue Leaf Foods',c:'R. Shah',s:0,f:4500},{n:'Nova Gadgets',c:'K. Patel',s:1,f:7500},{n:'Urban Threads',c:'S. Joshi',s:2,f:6000},{n:'Green Roots',c:'M. Desai',s:3,f:5500}];
-function draw(){var fee=0;O.forEach(function(o){if(o.s>=2)fee+=o.f});
-b.innerHTML='<div class="kpi"><div>Active: '+O.length+'</div><div>Lost: '+lost+'</div><div>Fees in process: ₹'+fee+'</div></div><p class="lead" style="margin-bottom:14px">Move opportunities through the pipeline, mark them lost, or create a POA.</p><div class="kan">'+S.map(function(s,i){var L=O.filter(function(o){return o.s===i});return '<div class="col"><h4>'+s+'<span>'+L.length+'</span></h4>'+L.map(function(o){var j=O.indexOf(o);return '<div class="ic"><b>'+o.n+'</b><small>'+o.c+' · ₹'+o.f+'</small>'+(i<3?'<button class="sm" data-a="n" data-j="'+j+'">Move to '+S[i+1]+'</button>':'<button class="sm" data-a="p" data-j="'+j+'">Make POA</button>')+'<button class="sm" data-a="l" data-j="'+j+'">Mark lost</button></div>'}).join('')+'</div>'}).join('')+'</div>'}
-b.onclick=function(e){var x=e.target.closest('[data-a]');if(!x)return;var j=+x.dataset.j,a=x.dataset.a;
-if(a==='n')O[j].s++;else if(a==='l'){O.splice(j,1);lost++}else tt('POA for '+O[j].n+' created (demo)');draw()};
-draw()};
+  var S=['Details','Search','Application under process','Follow-up'],lost=[],O=[
+    {n:'Sunrise Spices',c:'A. Mehta',s:0,f:5000},{n:'Blue Leaf Foods',c:'R. Shah',s:0,f:4500},{n:'Nova Gadgets',c:'K. Patel',s:1,f:7500},{n:'Urban Threads',c:'S. Joshi',s:2,f:6000},{n:'Green Roots',c:'M. Desai',s:3,f:5500}
+  ];
+  function draw(){var fee=0;O.forEach(function(o){if(o.s>=2)fee+=o.f});
+    b.innerHTML='<div class="kpi"><div>Active: '+O.length+'</div><div>Lost: '+lost.length+'</div><div>Fees in process: ₹'+fee.toLocaleString('en-IN')+'</div></div><p class="lead" style="margin-bottom:14px">Move opportunities through the pipeline, mark them lost, or restore a lost record. Sample data only.</p><div class="kan">'+S.map(function(stage,i){var L=O.filter(function(o){return o.s===i});return '<div class="col"><h4>'+stage+'<span>'+L.length+'</span></h4>'+L.map(function(o){var j=O.indexOf(o);return '<div class="ic"><b>'+o.n+'</b><small>'+o.c+' · ₹'+o.f.toLocaleString('en-IN')+'</small>'+(i<3?'<button class="sm" data-a="n" data-j="'+j+'">Move to '+S[i+1]+'</button>':'<button class="sm" data-a="p" data-j="'+j+'">Make POA</button>')+'<button class="sm" data-a="l" data-j="'+j+'">Mark lost</button></div>'}).join('')+'</div>'}).join('')+'</div><div class="box" style="margin-top:14px"><b>Lost records</b>'+(lost.length?lost.map(function(o,i){return '<p style="margin:8px 0">'+o.n+' · '+o.c+' <button class="sm" data-a="r" data-j="'+i+'">Restore</button></p>'}).join(''):'<p style="margin:6px 0">No lost records.</p>')+'</div>';
+  }
+  b.onclick=function(e){var x=e.target.closest('[data-a]');if(!x)return;var j=+x.dataset.j,a=x.dataset.a;
+    if(a==='n'&&O[j])O[j].s++;
+    else if(a==='l'&&O[j])lost.push(O.splice(j,1)[0]);
+    else if(a==='r'&&lost[j])O.push(lost.splice(j,1)[0]);
+    else if(a==='p'&&O[j])tt('POA for '+O[j].n+' created (demo)');
+    draw();
+  };
+  draw();
+};
 
 DM.adv=function(b){
 var T=[{t:'Prepare client proposal',o:'Meera',s:'In progress',c:'Northwind Ltd'},{t:'Follow up on invoice',o:'Raj',s:'Open',c:'Bright Labs'},{t:'Update contact list',o:'Meera',s:'Done',c:'Orbit Co'},{t:'Quarterly review call',o:'Karan',s:'Open',c:'Zenith Pvt'},{t:'Collect KYC documents',o:'Raj',s:'In progress',c:'Northwind Ltd'},{t:'Send renewal reminder',o:'Karan',s:'Done',c:'Bright Labs'}];
@@ -258,27 +314,51 @@ $('#sq').oninput=function(){q=this.value.toLowerCase();rows()};
 DI=setInterval(function(){document.querySelectorAll('[data-tm]').forEach(function(el){var i=+el.dataset.tm;el.textContent=(R[i]?'⏸ ':'▶ ')+fm(sec(i))})},1000);
 rows()};
 
-DM.shop=function(b){
-var C={Laptop:[['Aero 14',54999,'💻'],['Slate Pro',72999,'💻'],['Note Lite',38999,'💻']],Phone:[['Nova X',24999,'📱'],['Pixel Go',15999,'📱'],['Edge 5G',31999,'📱']],Tablet:[['Tab S',19999,'📲'],['Tab Max',27999,'📲']],Headphone:[['Bass Pro',3999,'🎧'],['Studio One',6999,'🎧']]},cat='Laptop',cart={},done=0;
-function tot(){var s=0;for(var k in cart)s+=cart[k].p*cart[k].q;return s}
-function draw(){
-var h='<div>'+Object.keys(C).map(function(k){return '<button class="sm'+(k===cat?' on':'')+'" data-a="c" data-k="'+k+'">'+k+'</button>'}).join('')+'</div><div class="pg">'+C[cat].map(function(p){return '<div class="pc"><i>'+p[2]+'</i><b>'+p[0]+'</b><p style="margin:4px 0 10px;color:var(--mut)">₹'+p[1]+'</p><button class="sm" data-a="a" data-n="'+p[0]+'" data-p="'+p[1]+'">Add to cart</button></div>'}).join('')+'</div>';
-var ks=Object.keys(cart);
-h+='<h3 style="margin:28px 0 10px">'+(done?'Your bill':'Cart')+'</h3>';
-if(done)h+='<div class="box"><b>Bill #HS-1001 (demo)</b>'+ks.map(function(k){return '<p style="margin:6px 0">'+k+' × '+cart[k].q+' = ₹'+cart[k].p*cart[k].q+'</p>'}).join('')+'<p><b>Total: ₹'+tot()+'</b></p><button class="sm on" data-a="d">Download PDF (demo)</button><button class="sm" data-a="r">Shop again</button></div>';
-else if(!ks.length)h+='<p class="lead">Your cart is empty. Add a product above.</p>';
-else h+='<div class="box">'+ks.map(function(k){var c=cart[k];return '<p style="margin:6px 0">'+k+' <button class="sm" data-a="m" data-n="'+k+'">−</button> '+c.q+' <button class="sm" data-a="p" data-n="'+k+'">+</button> ₹'+c.p*c.q+'</p>'}).join('')+'<p><b>Total: ₹'+tot()+'</b></p><button class="sm on" data-a="o">Checkout (demo)</button></div>';
-b.innerHTML=h}
-b.onclick=function(e){var x=e.target.closest('[data-a]');if(!x)return;var a=x.dataset.a,n=x.dataset.n;
-if(a==='c')cat=x.dataset.k;
-else if(a==='a'){done=0;if(cart[n])cart[n].q++;else cart[n]={p:+x.dataset.p,q:1};tt(n+' added to cart')}
-else if(a==='p')cart[n].q++;
-else if(a==='m'){if(--cart[n].q<1)delete cart[n]}
-else if(a==='o')done=1;
-else if(a==='d'){tt('PDF bill downloaded (demo)');return}
-else if(a==='r'){cart={};done=0}
-draw()};
-draw()};
+function downloadBillPDF(title, billNo, items, total, paymentLabel){
+  function clean(v){return String(v).replace(/[^\x20-\x7E]/g,"?").replace(/\\/g,"\\\\").replace(/\(/g,"\\(").replace(/\)/g,"\\)")}
+  var lines=[title,"Demo invoice - sample data only","Invoice: "+billNo,"Date: "+new Date().toLocaleDateString(),"----------------------------------------"];
+  items.forEach(function(item){lines.push(item.name+" x "+item.qty+" = Rs. "+item.price*item.qty)});
+  lines.push("----------------------------------------","Total: Rs. "+total,"Payment: "+paymentLabel,"This is a portfolio demonstration, not a real order.");
+  var stream="BT\n/F1 11 Tf\n50 790 Td\n15 TL\n"+lines.map(function(line,i){return (i?"T*\n":"")+"("+clean(line)+") Tj\n"}).join("")+"ET";
+  var objects=["1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj","2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj","3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj","4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj","5 0 obj << /Length "+stream.length+" >> stream\n"+stream+"endstream endobj"];
+  var pdf="%PDF-1.4\n", offsets=[0];
+  objects.forEach(function(obj){offsets.push(pdf.length);pdf+=obj+"\n"});
+  var xref=pdf.length;pdf+="xref\n0 "+(objects.length+1)+"\n0000000000 65535 f \n";
+  for(var i=1;i<offsets.length;i++)pdf+=String(offsets[i]).padStart(10,"0")+" 00000 n \n";
+  pdf+="trailer << /Size "+(objects.length+1)+" /Root 1 0 R >>\nstartxref\n"+xref+"\n%%EOF";
+  var blob=new Blob([pdf],{type:"application/pdf"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download=billNo+".pdf";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},1500);
+}
+function buildShopDemo(b, variant){
+  var isPHP=variant==="php",brand=isPHP?"H_SMachines · PHP Store":"H_S Machines · ASP.NET Store";
+  var C={Laptop:[['Aero 14',54999,'💻'],['Slate Pro',72999,'💻'],['Note Lite',38999,'💻']],Phone:[['Nova X',24999,'📱'],['Pixel Go',15999,'📱'],['Edge 5G',31999,'📱']],Tablet:[['Tab S',19999,'📲'],['Tab Max',27999,'📲']],Headphone:[['Bass Pro',3999,'🎧'],['Studio One',6999,'🎧']]};
+  var cat='Laptop',cart={},done=0,orderNo=isPHP?"PHP-HS-1001":"ASP-HS-1001";
+  function tot(){var sum=0;Object.keys(cart).forEach(function(k){sum+=cart[k].p*cart[k].q});return sum}
+  function draw(){
+    var h='<div class="kpi"><div>'+brand+'</div><div>Sample products</div><div>'+(isPHP?'PayPal checkout flow':'Cash on delivery flow')+'</div></div>';
+    h+='<p class="lead" style="margin-bottom:10px">This is an interactive front-end preview using sample products. No real payment or order is processed.</p>';
+    h+='<div>'+Object.keys(C).map(function(k){return '<button class="sm'+(k===cat?' on':'')+'" data-a="c" data-k="'+k+'">'+k+'</button>'}).join('')+'</div><div class="pg">'+C[cat].map(function(p){return '<div class="pc"><i>'+p[2]+'</i><b>'+p[0]+'</b><p style="margin:4px 0 10px;color:var(--mut)">₹'+p[1].toLocaleString('en-IN')+'</p><button class="sm" data-a="a" data-n="'+p[0]+'" data-p="'+p[1]+'">Add to cart</button></div>'}).join('')+'</div>';
+    var ks=Object.keys(cart);h+='<h3 style="margin:28px 0 10px">'+(done?'Order summary':'Shopping cart')+'</h3>';
+    if(done){h+='<div class="box"><b>Order '+orderNo+' · Demo</b>'+ks.map(function(k){return '<p style="margin:6px 0">'+k+' × '+cart[k].q+' = ₹'+(cart[k].p*cart[k].q).toLocaleString('en-IN')+'</p>'}).join('')+'<p><b>Total: ₹'+tot().toLocaleString('en-IN')+'</b></p><p>Payment method: '+(isPHP?'PayPal (simulated)':'Cash on Delivery')+'</p><button class="sm on" data-a="d">Download PDF bill</button><button class="sm" data-a="r">Shop again</button></div>'}
+    else if(!ks.length)h+='<p class="lead">Your cart is empty. Add a product above.</p>';
+    else h+='<div class="box">'+ks.map(function(k){var item=cart[k];return '<p style="margin:6px 0">'+k+' <button class="sm" data-a="m" data-n="'+k+'" aria-label="Decrease '+k+'">−</button> '+item.q+' <button class="sm" data-a="p" data-n="'+k+'" aria-label="Increase '+k+'">+</button> ₹'+(item.p*item.q).toLocaleString('en-IN')+'</p>'}).join('')+'<p><b>Total: ₹'+tot().toLocaleString('en-IN')+'</b></p><button class="sm on" data-a="o">'+(isPHP?'Continue to PayPal (demo)':'Place COD order (demo)')+'</button></div>';
+    b.innerHTML=h;
+  }
+  b.onclick=function(e){var x=e.target.closest('[data-a]');if(!x)return;var a=x.dataset.a,n=x.dataset.n;
+    if(a==='c')cat=x.dataset.k;
+    else if(a==='a'){done=0;if(cart[n])cart[n].q++;else cart[n]={p:+x.dataset.p,q:1};tt(n+' added to cart')}
+    else if(a==='p'&&cart[n])cart[n].q++;
+    else if(a==='m'&&cart[n]){if(--cart[n].q<1)delete cart[n]}
+    else if(a==='o'){done=1;tt(isPHP?'PayPal checkout simulated':'COD order placed in demo')}
+    else if(a==='d'){downloadBillPDF(brand,orderNo,Object.keys(cart).map(function(k){return {name:k,qty:cart[k].q,price:cart[k].p}}),tot(),isPHP?'PayPal (simulated)':'Cash on Delivery');tt('PDF bill downloaded ✓');return}
+    else if(a==='r'){cart={};done=0}
+    draw();
+  };
+  draw();
+}
+DM["php-shop"]=function(b){buildShopDemo(b,"php")};
+DM["asp-shop"]=function(b){buildShopDemo(b,"asp")};
+
 </script>
 </body>
 </html>
